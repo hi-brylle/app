@@ -1,5 +1,10 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:prettier/recommended", "plugin:storybook/recommended"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:jsx-a11y/recommended",
+    "plugin:storybook/recommended",
+    "plugin:prettier/recommended"
+  ],
   "plugins": ["unused-imports"],
   "rules": {
     "prettier/prettier": ["error", { "endOfLine": "auto" }],
@@ -12,6 +17,12 @@
       }
     ],
     "no-console": "error",
-    "no-debugger": "error"
+    "no-debugger": "error",
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "controlComponents": ["TextInput", "Search"]
+      }
+    ]
   }
 }
